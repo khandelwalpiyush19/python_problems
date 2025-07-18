@@ -5,7 +5,7 @@
 # for i in range(n):
 #     print(f"i is {i}")
 #     isSwap = False
-#     for j in range (n-i-1):
+#     for j in range(n-i-1):
 #         print(f"j is {j}")
 #         if nums[j] > nums[j+1]:
 #             # swap the values
@@ -175,21 +175,151 @@
 # # print(nums)
 
 
-strs = ["flower", "flow", "flight"]
-x = sorted(strs)
-print(x)
+# strs = ["flower", "flow", "flight"]
+# x = sorted(strs)
+# print(x)
 
-# Start with the first string as reference
-first = x[0]
-last = x[-1]
-prefix = ""
+# # Start with the first string as reference
+# first = x[0]
+# last = x[-1]
+# prefix = ""
 
-# Compare characters of first and last string
-for i in range(min(len(first), len(last))):
-    if first[i] == last[i]:
-        prefix += first[i]
-    else:
-        break
+# # Compare characters of first and last string
+# for i in range(min(len(first), len(last))):
+#     if first[i] == last[i]:
+#         prefix += first[i]
+#     else:
+#         break
 
-print("Longest common prefix:", prefix)
-   
+# print("Longest common prefix:", prefix)
+# =======================================================================
+
+# s = "abcde"
+# goal = "cdeab"
+# rotated = ""
+# for i in range(len(s)):
+#     rotated = s[i:] + s[:i]
+#     if rotated == goal:
+#         print(True)
+#         break
+# # rotated = s[1:] + s[0]
+# # rotated_1 = rotated[1:] + rotated[0]
+# # print(rotated)
+# # print(rotated_1)
+
+
+
+# ==================================================================================================================
+
+# nums1 = [1,3,5]
+# nums2 = [2,4]
+# nums1.extend(nums2)
+# nums1.sort()
+# print(nums1)
+# median = 0
+# n= len(nums1)
+# if n%2 == 0:
+#     i = n//2
+#     median= (nums1[i] + nums1[i-1]) / 2
+# else :
+#     i = (n//2)
+#     print(f"i is is {i}")
+#     median = nums1[i]
+# print(median)
+
+# =======================================================================================
+
+# s = "eguhugchmtcmtumtumummcmvkxoapzjnxifioxzuam"
+
+# # Step 1: Frequency dictionary
+# freq = {}
+# for ch in s:
+#     freq[ch] = freq.get(ch, 0) + 1
+# print(freq)
+
+# # Step 2: Sort characters by frequency
+# sorted_chars = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+# print(sorted_chars)
+
+# # Step 3: Rebuild string based on sorted frequencies
+# sorted_str = "".join(ch * freq for ch, freq in sorted_chars)
+
+# print(sorted_str)
+
+# ======================================================================================
+
+# import re
+
+
+# s= "-0232432ssd"
+# digits = re.sub(r"\D", "", s)
+# print(digits)
+# for ch in digits:
+#     if digits[0] == '-':
+#         digits= -digits
+# cleaned = digits.lstrip("0")
+# print(cleaned)
+
+# ==========================================================================================
+
+# s = "baba"
+# ss_list = []
+# n = len(s)
+# for i in range(n):
+#     for j in range(i,n):
+#         ss = s[i:j+1]
+#         ss_list.append(ss)
+# sss_list = sorted(ss_list)
+# # sss_list = list(set(sss_list))
+# lss =sss_list.count(sss_list)
+# print(lss)
+# ========================================================================================================================
+
+# s = "()(())((()()))"
+# count = 0
+# max_val = 0
+
+# for i in range(len(s)):
+#     if s[i] == '(':
+#         count += 1
+#         max_val = max(max_val, count)
+#     elif s[i] == ')':
+#         count -= 1
+
+# print(max_val)
+# ====================================================================================================
+# s="Hello*"
+# a=0
+# b=0
+# for i in s:
+#     if i=='*':
+#         a+=1
+#     elif i=='#':
+#         b+=1
+# print(a-b)
+# ==========================================================================================================
+# size = int(input("Enter the size of the list: "))
+# my_list = []
+# max_val = 0
+# count= 1
+# for i in range(size):
+#     value = input(f"Enter unique value {i+1}: ")
+#     my_list.append(value)
+
+# print("Generated list:", my_list)
+
+# for i in range(size):
+#     max_val = max(my_list[i],my_list[i-1])
+#     if max_val == my_list[i]:
+#         count+=1
+    
+# print(count)
+
+# ===========================================================================================================
+# e = [7,0,5,1,3] 
+# l = [1,2,1,3,4]
+# max_g = 0
+# for i1,i2 in zip(e,l):
+#     val = i1-i2
+#     guest = val
+
